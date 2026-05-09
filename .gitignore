@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+_multiconfig.yml
+# 开发设计文档（不入库）
+docs/dev/

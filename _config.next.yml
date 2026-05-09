@@ -61,23 +61,23 @@ font:
   global:
     external: true
     family: "Noto Sans SC"
-    size: 16
+    size: 1
   title:
     external: true
     family: "Noto Sans SC"
-    size: 24
+    size: 1.375
   headings:
     external: true
     family: "Noto Sans SC"
-    size: 20
+    size: 1.625
   posts:
     external: true
     family: "Noto Sans SC"
-    size: 16
+    size: 1
   codes:
     external: true
     family: "JetBrains Mono"
-    size: 14
+    size: 0.875
 
 # ==================== 页脚 ====================
 footer:

@@ -1,0 +1,165 @@
+// ==================== 自定义样式 ====================
+
+// 主色调
+$accent-color = #3eaf7c
+$accent-hover = #2e8b5e
+$text-color = #2c3e50
+$text-light = #7f8c8d
+$border-color = #eaecef
+$code-bg = #282c34
+
+// ==================== 全局 ====================
+body
+  font-family "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif
+  color $text-color
+
+a
+  color $accent-color
+  &:hover
+    color $accent-hover
+
+// ==================== 头部 ====================
+.site-meta .site-title
+  font-weight 700
+  letter-spacing 1px
+
+// ==================== 文章卡片 ====================
+.post-block
+  background #fff
+  border-radius 8px
+  padding 24px 32px
+  margin-bottom 24px
+  box-shadow 0 1px 3px rgba(0,0,0,0.04)
+  transition box-shadow 0.3s ease
+  &:hover
+    box-shadow 0 4px 12px rgba(0,0,0,0.08)
+
+.post-title-link
+  color $text-color
+  font-weight 600
+  font-size 1.3em
+  line-height 1.4
+  &:hover
+    color $accent-color
+
+.post-meta
+  color $text-light
+  font-size 0.85em
+
+// ==================== 代码块 ====================
+code
+  background rgba($accent-color, 0.1)
+  color #e83e8c
+  padding 2px 6px
+  border-radius 4px
+  font-family "JetBrains Mono", "Fira Code", monospace
+  font-size 0.9em
+
+figure.highlight
+  border-radius 8px
+  margin 16px 0
+  box-shadow 0 2px 8px rgba(0,0,0,0.12)
+
+pre
+  border-radius 8px
+
+// ==================== 引用块 ====================
+blockquote
+  border-left 4px solid $accent-color
+  background rgba($accent-color, 0.05)
+  border-radius 0 8px 8px 0
+  padding 12px 20px
+  margin 16px 0
+  color $text-light
+  p
+    margin 0
+
+// ==================== 表格 ====================
+table
+  border-radius 8px
+  overflow hidden
+  th
+    background $accent-color
+    color #fff
+    font-weight 500
+  td, th
+    padding 10px 16px
+  tr:hover td
+    background rgba($accent-color, 0.05)
+
+// ==================== 链接 ====================
+.post-body a
+  color $accent-color
+  border-bottom 1px solid rgba($accent-color, 0.3)
+  transition all 0.2s ease
+  &:hover
+    color $accent-hover
+    border-bottom-color $accent-hover
+    text-decoration none
+
+// ==================== 标签云 ====================
+.tag-cloud a
+  &:hover
+    color $accent-color !important
+
+// ==================== 侧边栏 ====================
+.sidebar
+  background #fff
+  border-radius 0 8px 8px 0
+
+.site-author-image
+  border 3px solid $accent-color
+  box-shadow 0 2px 8px rgba(0,0,0,0.1)
+
+.site-state-item
+  border-right 1px solid $border-color
+  &:last-child
+    border-right none
+
+// ==================== 分页 ====================
+.pagination
+  .page-number
+    border-radius 20px
+    &.current
+      background $accent-color
+      color #fff
+
+// ==================== 按钮 ====================
+.btn
+  border-radius 20px
+  border-color $accent-color
+  color $accent-color
+  &:hover
+    background $accent-color
+    color #fff
+
+// ==================== 进度条 ====================
+.reading-progress-bar
+  background $accent-color !important
+
+// ==================== 回到顶部 ====================
+.back-to-top
+  background $accent-color
+  border-radius 50%
+  &:hover
+    background $accent-hover
+
+// ==================== 暗色模式 ====================
+if hexo-config("darkmode")
+  @media (prefers-color-scheme dark)
+    .post-block
+      background #1e1e1e
+      box-shadow 0 1px 3px rgba(0,0,0,0.2)
+      &:hover
+        box-shadow 0 4px 12px rgba(0,0,0,0.3)
+
+    .sidebar
+      background #1e1e1e
+
+    code
+      background rgba($accent-color, 0.15)
+      color #ff79c6
+
+  .darkmode-toggle
+    bottom 80px
+    right 20px

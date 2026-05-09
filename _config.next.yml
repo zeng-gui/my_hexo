@@ -2,7 +2,8 @@
 # 参考：https://theme-next.js.org/
 
 # ==================== 方案 ====================
-scheme: Muse
+# Gemini: 现代双栏布局，带阴影效果，最精致
+scheme: Gemini
 
 # ==================== 菜单 ====================
 menu:
@@ -12,12 +13,19 @@ menu:
   tags: /tags/ || fas fa-tags
   about: /about/ || fas fa-user
 
+menu_settings:
+  icons: true
+  badges: true
+
 # ==================== 侧边栏 ====================
 sidebar:
   position: left
-  display: post
-  padding: 18
+  width: 300
+  padding: 20
   offset: 12
+  display: post
+  b2t: true
+  scrollpercent: true
 
 # ==================== 站点头像 ====================
 avatar:
@@ -31,17 +39,45 @@ darkmode:
 
 # ==================== 代码块 ====================
 codeblock:
+  # 语法高亮主题
+  highlight_theme: night
+  prism:
+    light: prism
+    dark: prism-dark
+  # 代码复制按钮
   copy_button:
     enable: true
     style: mac
-  highlight_theme: night eighties
+  # 代码块折叠
+  fold:
+    enable: false
+  # 自动换行
   word_wrap: true
 
 # ==================== 字体 ====================
 font:
   enable: true
+  host: "//fonts.googleapis.com"
   global:
+    external: true
+    family: "Noto Sans SC"
     size: 16
+  title:
+    external: true
+    family: "Noto Sans SC"
+    size: 24
+  headings:
+    external: true
+    family: "Noto Sans SC"
+    size: 20
+  posts:
+    external: true
+    family: "Noto Sans SC"
+    size: 16
+  codes:
+    external: true
+    family: "JetBrains Mono"
+    size: 14
 
 # ==================== 页脚 ====================
 footer:
@@ -49,6 +85,7 @@ footer:
   icon:
     name: fab fa-github
     url: https://github.com/zeng-gui
+    animated: true
   copyright: zg
   powered:
     enable: true
@@ -58,14 +95,25 @@ footer:
 social:
   GitHub: https://github.com/zeng-gui || fab fa-github
 
+social_icons:
+  icons: true
+  size: 20
+
 # ==================== 文章设置 ====================
 post_settings:
   toc:
     enable: true
     number: true
+    wrap: true
   auto_excerpt:
     enable: true
-    description_length: 150
+    description_length: 200
+
+# ==================== 文章卡片 ====================
+# 首页文章列表样式
+post_meta:
+  item_text_post: true
+  item_text_total: false
 
 # ==================== 版权声明 ====================
 post_copyright:
@@ -76,7 +124,8 @@ post_copyright:
 # ==================== 阅读进度 ====================
 reading_progress:
   enable: true
-  color: '#1F5C8D'
+  color: "#3eaf7c"
+  height: 3px
 
 # ==================== 数学公式 ====================
 math:
@@ -99,3 +148,21 @@ back2top:
   enable: true
   sidebar: true
   scrollpercent: true
+
+# ==================== 动画 ====================
+motion:
+  enable: true
+  async: false
+  transition:
+    menu_item: fadeInDown
+    post_block: fadeIn
+    post_header: fadeInDown
+    post_body: fadeInDown
+    coll_header: fadeInLeft
+    sidebar: fadeInUp
+
+# ==================== 头部标签 ====================
+# 自定义 head，引入外部 CSS
+custom_file_path:
+  head: source/_data/head.swig
+  style: source/_data/styles.styl

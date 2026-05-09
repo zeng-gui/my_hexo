@@ -1,0 +1,101 @@
+# NexT 主题配置
+# 参考：https://theme-next.js.org/
+
+# ==================== 方案 ====================
+scheme: Muse
+
+# ==================== 菜单 ====================
+menu:
+  home: / || fas fa-home
+  archives: /archives/ || fas fa-archive
+  categories: /categories/ || fas fa-th-list
+  tags: /tags/ || fas fa-tags
+  about: /about/ || fas fa-user
+
+# ==================== 侧边栏 ====================
+sidebar:
+  position: left
+  display: post
+  padding: 18
+  offset: 12
+
+# ==================== 站点头像 ====================
+avatar:
+  url: /images/avatar.gif
+  rounded: true
+  rotated: true
+
+# ==================== 暗色模式 ====================
+darkmode:
+  toggle: true
+
+# ==================== 代码块 ====================
+codeblock:
+  copy_button:
+    enable: true
+    style: mac
+  highlight_theme: night eighties
+  word_wrap: true
+
+# ==================== 字体 ====================
+font:
+  enable: true
+  global:
+    size: 16
+
+# ==================== 页脚 ====================
+footer:
+  since: 2025
+  icon:
+    name: fab fa-github
+    url: https://github.com/zeng-gui
+  copyright: zg
+  powered:
+    enable: true
+    version: true
+
+# ==================== 社交链接 ====================
+social:
+  GitHub: https://github.com/zeng-gui || fab fa-github
+
+# ==================== 文章设置 ====================
+post_settings:
+  toc:
+    enable: true
+    number: true
+  auto_excerpt:
+    enable: true
+    description_length: 150
+
+# ==================== 版权声明 ====================
+post_copyright:
+  enable: true
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# ==================== 阅读进度 ====================
+reading_progress:
+  enable: true
+  color: '#1F5C8D'
+
+# ==================== 数学公式 ====================
+math:
+  mathjax:
+    enable: true
+    per_page: false
+
+# ==================== SEO ====================
+seo:
+  enable: true
+
+# ==================== 统计 ====================
+symbols_count_time:
+  separate_meta: true
+  item_text_post: true
+  item_text_total: false
+
+# ==================== 回到顶部 ====================
+back2top:
+  enable: true
+  sidebar: true
+  scrollpercent: true

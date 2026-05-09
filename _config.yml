@@ -15,7 +15,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://<your-username>.github.io
+url: https://zeng-gui.github.io/my_hexo
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -42,14 +42,14 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
   line_number: true
-  auto_detect: false
-  tab_replace: ''
+  auto_detect: true
+  tab_replace: '    '
   wrap: true
   hljs: false
 prismjs:
@@ -98,7 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

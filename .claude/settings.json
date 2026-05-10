@@ -19,7 +19,12 @@
       "Bash(tree *)",
       "Bash(mkdir *)",
       "Bash(touch *)",
-      "Bash(cp *)"
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(curl *)",
+      "Bash(lsof *)",
+      "Bash(pkill *)",
+      "Bash(grep *)"
     ],
     "deny": [
       "Bash(rm -rf *)",
@@ -30,5 +35,13 @@
   },
   "env": {
     "NODE_ENV": "development"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "command": "bash .claude/hooks/check-deploy-command.sh \"$TOOL_INPUT\""
+      }
+    ]
   }
 }
